@@ -23,8 +23,3 @@ func spawn_apple():
 	var apple = $Apple
 	var random_x = randf_range(0, get_viewport().size.x)
 	apple.position = Vector2(random_x, 0)
-
-func _on_apple_child_entered_tree(node: Node): 
-	if node == $Character:
-		$Label.text = "Score : "+str(value+1)
-	pass # Replace with function body.
