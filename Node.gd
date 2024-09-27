@@ -23,3 +23,10 @@ func spawn_apple():
 	var apple = $Apple
 	var random_x = randf_range(0, get_viewport().size.x)
 	apple.position = Vector2(random_x, 0)
+
+
+func _on_area_apple_body_entered(body):
+	if body.name == "Character": 
+		value = value + 1
+		$Label.text = " Score : "+str(value)
+	pass # Replace with function body.
