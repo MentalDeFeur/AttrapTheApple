@@ -15,13 +15,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	spawn_timer -= delta
-	if spawn_timer <= 0 :
+	if spawn_timer <= 0:
 		spawn_apple()
 		spawn_timer = spawn_interval
 		
 func spawn_apple():
 	var apple = $Apple
-	var random_x = randf_range(0, get_viewport().size.x)
+	var random_x = randf_range(0,648)
 	apple.position = Vector2(random_x, 0)
 
 

@@ -11,4 +11,3 @@ func _ready():
 func _process(delta):
 	velocity.y += gravity * delta
 	move_and_slide()
-
