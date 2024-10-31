@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://d3enmgukpppw2"]
+[gd_scene load_steps=61 format=3 uid="uid://d3enmgukpppw2"]
 
 [ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="1_7hsgu"]
 [ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="1_458jc"]
@@ -360,10 +360,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vqn8"]
-size = Vector2(26.2029, 25.5215)
+size = Vector2(21.1799, 4.6879)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuim6"]
-size = Vector2(24.4444, 25.8)
+size = Vector2(24.4444, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nd676"]
 atlas = ExtResource("9_ymwwt")
@@ -492,10 +492,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tspg2"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_xdrno"]
-radius = 41.1947
+radius = 38.0
 
 [node name="Game" type="Node"]
 script = ExtResource("1_ek3jp")
@@ -535,23 +533,23 @@ position = Vector2(571, 296)
 scale = Vector2(4.5, 5)
 script = ExtResource("3_ckdkg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character"]
+[node name="Personnage" type="AnimatedSprite2D" parent="Character"]
 texture_filter = 1
-position = Vector2(1.11111, -1.7)
-scale = Vector2(0.958333, 1.01875)
+position = Vector2(0.999997, -2.3)
+scale = Vector2(0.965278, 0.98125)
 sprite_frames = SubResource("SpriteFrames_mufw0")
 animation = &"run"
 
-[node name="AreaCharacter" type="Area2D" parent="Character/AnimatedSprite2D" groups=["Character"]]
+[node name="AreaCharacter" type="Area2D" parent="Character/Personnage" groups=["Character"]]
 position = Vector2(-0.444443, 1.4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/AnimatedSprite2D/AreaCharacter"]
-position = Vector2(-1.06279, 0.0723915)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Personnage/AreaCharacter"]
+position = Vector2(-0.591507, -10.1643)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_1vqn8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
-position = Vector2(-0.222229, 0.0999985)
+position = Vector2(-0.222229, 0)
 shape = SubResource("RectangleShape2D_nuim6")
 
 [node name="Apple" type="CharacterBody2D" parent="."]
@@ -559,20 +557,13 @@ script = ExtResource("8_37xtk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Apple"]
 texture_filter = 1
-position = Vector2(75, 65)
-scale = Vector2(5.0625, 4.625)
+position = Vector2(128, 116.5)
+scale = Vector2(5.0625, 4.71875)
 sprite_frames = SubResource("SpriteFrames_1msad")
 animation = &"apple"
 
-[node name="AreaApple" type="Area2D" parent="Apple/AnimatedSprite2D"]
-position = Vector2(-14.8148, -14.0541)
-scale = Vector2(0.197531, 0.216216)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple/AnimatedSprite2D/AreaApple"]
-shape = SubResource("CircleShape2D_tspg2")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Apple"]
-position = Vector2(75, 59)
+position = Vector2(127, 110)
 shape = SubResource("CircleShape2D_xdrno")
 
 [node name="Label" type="Label" parent="."]
@@ -583,4 +574,4 @@ offset_bottom = 87.0
 theme_override_colors/font_color = Color(0.86595, 0.0854413, 0, 1)
 theme_override_font_sizes/font_size = 30
 
-[connection signal="body_entered" from="Apple/AnimatedSprite2D/AreaApple" to="." method="_on_area_apple_body_entered"]
+[connection signal="body_entered" from="Character/Personnage/AreaCharacter" to="." method="_on_area_character_body_entered"]
