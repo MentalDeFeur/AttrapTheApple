@@ -1,31 +1,29 @@
 extends CharacterBody2D
 
 
-const SPEED = 600.0
+const SPEED = 300.0
 const JUMP_VELOCITY = 400
 @onready var animate = $Personnage
-var value = 0
+var friction = 800
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	pass
 	
-func _physics_process(delta):
-	# Handle jump
-	velocity.y = JUMP_VELOCITY
-		
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("move_left", "move_right") 
-	
-	if direction:
-		velocity.x = direction * SPEED
+func _input(event: InputEvent):
+	if event is InputEventScreenDrag:
+		velocity = (event.relative).normalized() * SPEED
 		animate.play("run")
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	elif event is InputEventScreenTouch and not event.pressed:
+		velocity = velocity
 		animate.play("idle")
-
-	move_and_slide()
+	else: 
+		animate.play("idle")
 	
+func _physics_process(delta: float) -> void:
+	velocity.y = JUMP_VELOCITY
+	
+	if velocity.length() > 0:
+		velocity = velocity.move_toward(Vector2.ZERO,friction * delta)
+		
+	move_and_slide()

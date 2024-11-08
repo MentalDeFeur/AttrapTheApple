@@ -25,6 +25,6 @@ func spawn_apple():
 	apple.position = Vector2(random_x, 0)
 
 
-func _on_area_character_body_entered(body: Node2D) -> void:
+func _on_area_character_body_entered(_body: Node2D) -> void:
 		value+=1
 		$Label.text = " Score : "+str(value)
