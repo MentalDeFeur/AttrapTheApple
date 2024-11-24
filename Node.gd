@@ -9,9 +9,8 @@ var value = 0
 func _ready():
 	set_process(true)
 	$Label.text = " Score : "+str(value)
-	pass # Replace with function body.
-
-
+	pass # Replace with function body
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	spawn_timer -= delta
