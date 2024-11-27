@@ -9,12 +9,15 @@ var is_dragging=false
 var touch_pos=0
 
 func _ready():
+	start_drag_position = get_viewport().size
+	$Personnage.play("idle")
 	pass
 
 func _input(event):
 	if event is InputEventScreenDrag:
 		is_dragging=true
-		touch_pos = event.position
+		position.x += event.relative.x
+		$Personnage.play("run")
 		
 func _physics_process(delta: float) -> void:
 	velocity.y = JUMP_VELOCITY
@@ -22,8 +25,7 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO,delta)
 		
 	if is_dragging:
-		var direction = (touch_pos - global_position).normalized()
-		velocity.x = direction.x * DRAG_SPEED
+		position.x = clamp(position.x,0,start_drag_position.x)
 	
 	move_and_slide()
 		

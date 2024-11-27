@@ -360,10 +360,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vqn8"]
-size = Vector2(21.1799, 4.6879)
+size = Vector2(22.7914, 4.48411)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuim6"]
-size = Vector2(24.4444, 26)
+size = Vector2(23.5556, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nd676"]
 atlas = ExtResource("9_ymwwt")
@@ -525,7 +525,7 @@ position = Vector2(-4, 331)
 shape = SubResource("RectangleShape2D_qlv61")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1148, 335)
+position = Vector2(1541, 336)
 shape = SubResource("RectangleShape2D_coc8v")
 
 [node name="Character" type="CharacterBody2D" parent="."]
@@ -544,12 +544,12 @@ animation = &"run"
 position = Vector2(-0.444443, 1.4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Personnage/AreaCharacter"]
-position = Vector2(-0.591507, -10.1643)
+position = Vector2(-0.476395, -10.0624)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_1vqn8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
-position = Vector2(-0.222229, 0)
+position = Vector2(0.222221, 0)
 shape = SubResource("RectangleShape2D_nuim6")
 
 [node name="Apple" type="CharacterBody2D" parent="."]
@@ -576,10 +576,10 @@ theme_override_font_sizes/font_size = 30
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.035
+anchor_right = 1.332
+anchor_bottom = 1.037
 offset_left = 8.0
-offset_right = -12.0
-offset_bottom = -22.6801
+offset_right = 0.536011
+offset_bottom = -23.976
 
 [connection signal="body_entered" from="Character/Personnage/AreaCharacter" to="." method="_on_area_character_body_entered"]
