@@ -1,6 +1,6 @@
 extends Node
 
-var spawn_interval = 2
+var spawn_interval = 1.3
 var spawn_timer = 0
 var value = 0
 
@@ -20,7 +20,7 @@ func _process(delta):
 		
 func spawn_apple():
 	var apple = $Apple
-	var random_x = randf_range(0,648)
+	var random_x = randf_range(0,618)
 	apple.position = Vector2(random_x, 0)
 
 
