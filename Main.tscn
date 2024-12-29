@@ -195,8 +195,8 @@ anchor_right = 0.449
 anchor_bottom = 0.5
 offset_left = 3.90399
 offset_top = -0.192001
-offset_right = -0.248047
-offset_bottom = 1.0
+offset_right = 67.752
+offset_bottom = 60.0
 text = "CatchTheApple
 "
 label_settings = SubResource("LabelSettings_q4g57")
@@ -229,3 +229,5 @@ text = "Credits
 "
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_Credits_pressed"]
