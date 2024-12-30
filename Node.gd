@@ -1,6 +1,6 @@
 extends Node
 
-var spawn_interval = 1.3
+var spawn_interval : float = 1.3
 var spawn_timer = 0
 var value = 0
 

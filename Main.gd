@@ -16,6 +16,7 @@ func _on_Play_pressed() -> void:
 
 
 func _on_Options_pressed() -> void:
+	get_tree().change_scene_to_file("res://Options.tscn")
 	pass # Replace with function body.
 
 

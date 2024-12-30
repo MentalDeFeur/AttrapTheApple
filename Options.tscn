@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://o1ljbmub3bbo"]
+[gd_scene load_steps=8 format=4 uid="uid://dpepq22x802u0"]
 
-[ext_resource type="Script" path="res://Main.gd" id="1_p4qus"]
-[ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="1_tqftf"]
-[ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="2_py8eb"]
+[ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="1_4idgd"]
+[ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="2_7o5at"]
+[ext_resource type="Script" path="res://Options.gd" id="3_5ibd0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhqu7"]
-texture = ExtResource("2_py8eb")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7e085"]
+texture = ExtResource("2_7o5at")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -153,25 +153,24 @@ texture = ExtResource("2_py8eb")
 10:2/0 = 0
 9:3/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_bfupk"]
-sources/0 = SubResource("TileSetAtlasSource_uhqu7")
+[sub_resource type="TileSet" id="TileSet_ldx3u"]
+sources/0 = SubResource("TileSetAtlasSource_7e085")
 
-[sub_resource type="FontVariation" id="FontVariation_yugq0"]
+[sub_resource type="FontVariation" id="FontVariation_aajw1"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_q4g57"]
-font = SubResource("FontVariation_yugq0")
+[sub_resource type="LabelSettings" id="LabelSettings_h01tc"]
+font = SubResource("FontVariation_aajw1")
 font_size = 52
 font_color = Color(0.713686, 0.282674, 0, 1)
 shadow_size = 12
 
-[node name="Main" type="Control"]
+[node name="OptionMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_p4qus")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -179,55 +178,55 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.997
 offset_bottom = -0.0560303
-texture = ExtResource("1_tqftf")
+texture = ExtResource("1_4idgd")
 stretch_mode = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAACYAAAAGAAAAAAAAACcAAAAGAAEAAAABACYAAAAHAAAAAAABACcAAAAHAAEAAAACACYAAAAIAAAAAAACACcAAAAIAAEAAAADACYAAAAGAAAAAAADACcAAAAGAAEAAAAEACYAAAAHAAAAAAAEACcAAAAHAAEAAAAFACYAAAAIAAAAAAAFACcAAAAIAAEAAAAGACYAAAAGAAAAAAAGACcAAAAGAAEAAAAHACYAAAAHAAAAAAAHACcAAAAHAAEAAAAIACYAAAAIAAAAAAAIACcAAAAIAAEAAAAJACYAAAAGAAAAAAAJACcAAAAGAAEAAAAKACYAAAAHAAAAAAAKACcAAAAHAAEAAAALACYAAAAIAAAAAAALACcAAAAIAAEAAAAMACYAAAAGAAAAAAAMACcAAAAGAAEAAAANACYAAAAHAAAAAAANACcAAAAHAAEAAAAOACYAAAAIAAAAAAAOACcAAAAIAAEAAAAPACYAAAAGAAAAAAAPACcAAAAGAAEAAAAQACYAAAAHAAAAAAAQACcAAAAHAAEAAAARACYAAAAIAAAAAAARACcAAAAIAAEAAAASACYAAAAGAAAAAAASACcAAAAGAAEAAAATACYAAAAHAAAAAAATACcAAAAHAAEAAAAUACYAAAAIAAAAAAAUACcAAAAIAAEAAAAVACYAAAAGAAAAAAAVACcAAAAGAAEAAAAWACYAAAAHAAAAAAAWACcAAAAHAAEAAAAXACYAAAAIAAAAAAAXACcAAAAIAAEAAAAYACYAAAAGAAAAAAAYACcAAAAGAAEAAAAZACYAAAAHAAAAAAAZACcAAAAHAAEAAAAaACYAAAAIAAAAAAAaACcAAAAIAAEAAAAbACYAAAAGAAAAAAAbACcAAAAGAAEAAAAcACYAAAAHAAAAAAAcACcAAAAHAAEAAAAdACYAAAAIAAAAAAAdACcAAAAIAAEAAAAeACYAAAAGAAAAAAAeACcAAAAGAAEAAAAfACYAAAAHAAAAAAAfACcAAAAHAAEAAAAgACYAAAAIAAAAAAAgACcAAAAIAAEAAAAhACYAAAAGAAAAAAAhACcAAAAGAAEAAAAiACYAAAAHAAAAAAAiACcAAAAHAAEAAAAjACYAAAAIAAAAAAAjACcAAAAIAAEAAAAkACYAAAAGAAAAAAAkACcAAAAGAAEAAAAlACYAAAAHAAAAAAAlACcAAAAHAAEAAAAmACYAAAAIAAAAAAAmACcAAAAIAAEAAAAnACYAAAAGAAAAAAAnACcAAAAGAAEAAAAoACYAAAAHAAAAAAAoACcAAAAHAAEAAAApACYAAAAIAAAAAAApACcAAAAIAAEAAAAqACYAAAAGAAAAAAAqACcAAAAGAAEAAAArACYAAAAHAAAAAAArACcAAAAHAAEAAAAsACYAAAAIAAAAAAAsACcAAAAIAAEAAAAtACYAAAAGAAAAAAAtACcAAAAGAAEAAAAuACYAAAAHAAAAAAAuACcAAAAHAAEAAAAvACYAAAAIAAAAAAAvACcAAAAIAAEAAAAwACYAAAAGAAAAAAAwACcAAAAGAAEAAAAxACYAAAAHAAAAAAAxACcAAAAHAAEAAAAyACYAAAAIAAAAAAAyACcAAAAIAAEAAAAzACYAAAAGAAAAAAAzACcAAAAGAAEAAAA0ACYAAAAHAAAAAAA0ACcAAAAHAAEAAAA1ACYAAAAIAAAAAAA1ACcAAAAIAAEAAAA2ACYAAAAGAAAAAAA2ACcAAAAGAAEAAAA3ACYAAAAHAAAAAAA3ACcAAAAHAAEAAAA4ACYAAAAIAAAAAAA4ACcAAAAIAAEAAAA5ACYAAAAGAAAAAAA5ACcAAAAGAAEAAAA6ACYAAAAHAAAAAAA6ACcAAAAHAAEAAAA7ACYAAAAIAAAAAAA7ACcAAAAIAAEAAAA8ACYAAAAGAAAAAAA8ACcAAAAGAAEAAAA9ACYAAAAHAAAAAAA9ACcAAAAHAAEAAAA+ACYAAAAIAAAAAAA+ACcAAAAIAAEAAAA/ACYAAAAGAAAAAAA/ACcAAAAGAAEAAABAACYAAAAHAAAAAABAACcAAAAHAAEAAABBACYAAAAIAAAAAABBACcAAAAIAAEAAABCACYAAAAGAAAAAABCACcAAAAGAAEAAABDACYAAAAHAAAAAABDACcAAAAHAAEAAABEACYAAAAIAAAAAABEACcAAAAIAAEAAABFACYAAAAGAAAAAABFACcAAAAGAAEAAABGACYAAAAHAAAAAABGACcAAAAHAAEAAABHACYAAAAIAAAAAABHACcAAAAIAAEAAAAAACgAAAAGAAIAAAABACgAAAAHAAIAAAACACgAAAAIAAIAAAADACgAAAAGAAIAAAAEACgAAAAHAAIAAAAFACgAAAAIAAIAAAAGACgAAAAGAAIAAAAHACgAAAAHAAIAAAAIACgAAAAIAAIAAAAJACgAAAAGAAIAAAAKACgAAAAHAAIAAAALACgAAAAIAAIAAAAMACgAAAAGAAIAAAANACgAAAAHAAIAAAAOACgAAAAIAAIAAAAPACgAAAAGAAIAAAAQACgAAAAHAAIAAAARACgAAAAIAAIAAAASACgAAAAGAAIAAAATACgAAAAHAAIAAAAUACgAAAAIAAIAAAAVACgAAAAGAAIAAAAWACgAAAAHAAIAAAAXACgAAAAIAAIAAAAYACgAAAAGAAIAAAAZACgAAAAHAAIAAAAaACgAAAAIAAIAAAAbACgAAAAGAAIAAAAcACgAAAAHAAIAAAAdACgAAAAIAAIAAAAeACgAAAAGAAIAAAAfACgAAAAHAAIAAAAgACgAAAAIAAIAAAAhACgAAAAGAAIAAAAiACgAAAAHAAIAAAAjACgAAAAIAAIAAAAkACgAAAAGAAIAAAAlACgAAAAHAAIAAAAmACgAAAAIAAIAAAAnACgAAAAGAAIAAAAoACgAAAAHAAIAAAApACgAAAAIAAIAAAAqACgAAAAGAAIAAAArACgAAAAHAAIAAAAsACgAAAAIAAIAAAAtACgAAAAGAAIAAAAuACgAAAAHAAIAAAAvACgAAAAIAAIAAAAwACgAAAAGAAIAAAAxACgAAAAHAAIAAAAyACgAAAAIAAIAAAAzACgAAAAGAAIAAAA0ACgAAAAHAAIAAAA1ACgAAAAIAAIAAAA2ACgAAAAGAAIAAAA3ACgAAAAHAAIAAAA4ACgAAAAIAAIAAAA5ACgAAAAGAAIAAAA6ACgAAAAHAAIAAAA7ACgAAAAIAAIAAAA8ACgAAAAGAAIAAAA9ACgAAAAHAAIAAAA+ACgAAAAIAAIAAAA/ACgAAAAGAAIAAABAACgAAAAHAAIAAABBACgAAAAIAAIAAABCACgAAAAGAAIAAABDACgAAAAHAAIAAABEACgAAAAIAAIAAABFACgAAAAGAAIAAABGACgAAAAHAAIAAABHACgAAAAIAAIAAAA=")
-tile_set = SubResource("TileSet_bfupk")
+tile_set = SubResource("TileSet_ldx3u")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.073
-anchor_top = 0.204
-anchor_right = 0.449
-anchor_bottom = 0.5
-offset_left = 3.90399
-offset_top = -0.192001
-offset_right = 67.752
-offset_bottom = 60.0
-text = "CatchTheApple
+anchor_left = 0.283
+anchor_top = 0.054
+anchor_right = 0.714
+anchor_bottom = 0.367
+offset_left = -0.0160217
+offset_top = 0.00799942
+offset_right = 0.471924
+offset_bottom = 0.18399
+text = "Options du jeu
 "
-label_settings = SubResource("LabelSettings_q4g57")
+label_settings = SubResource("LabelSettings_h01tc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.683
-anchor_top = 0.727
-anchor_right = 0.965
-anchor_bottom = 0.884
-offset_left = 0.18396
-offset_top = -0.0960388
-offset_right = 0.319946
-offset_bottom = 0.167969
+anchor_left = 0.238
+anchor_top = 0.383
+anchor_right = 0.766
+anchor_bottom = 0.818
+offset_left = -0.175995
+offset_top = -0.184006
+offset_right = 0.567993
+offset_bottom = -0.0640259
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="DifficultGame" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Lancer le jeu"
+text = "Difficulté du jeu : 0"
+script = ExtResource("3_5ibd0")
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="MusicOptions" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Options"
+text = "Musique : Off"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="RetourButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Credits
-"
+text = "Retour"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/DifficultGame" to="VBoxContainer/DifficultGame" method="_on_DifficultGame_pressed"]
+[connection signal="pressed" from="VBoxContainer/MusicOptions" to="VBoxContainer/DifficultGame" method="_on_Music_pressed"]
+[connection signal="pressed" from="VBoxContainer/RetourButton" to="VBoxContainer/DifficultGame" method="_on_Retour_pressed"]
