@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d2s0a08yly42i" path="res://Free/Items/Fruits/Apple.png" id="9_ymwwt"]
 [ext_resource type="Texture2D" uid="uid://beqmrxlq6ndwe" path="res://Free/Items/Fruits/Collected.png" id="10_8rxo2"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6i1r"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3vgp7"]
 texture = ExtResource("1_458jc")
 0:0/0 = 0
 1:0/0 = 0
@@ -163,7 +163,7 @@ texture = ExtResource("1_458jc")
 
 [sub_resource type="TileSet" id="TileSet_wd1fv"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_c6i1r")
+sources/0 = SubResource("TileSetAtlasSource_3vgp7")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v66ff"]
 size = Vector2(1162, 34)

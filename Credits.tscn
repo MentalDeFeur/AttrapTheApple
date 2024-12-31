@@ -1,19 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://o1ljbmub3bbo"]
+[gd_scene load_steps=7 format=3 uid="uid://dy3ip4eveaa5t"]
 
-[ext_resource type="Script" path="res://Main.gd" id="1_p4qus"]
-[ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="1_tqftf"]
-[ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="2_py8eb"]
+[ext_resource type="Script" path="res://Credits.gd" id="1_g8l8w"]
+[ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="2_yy0bc"]
+[ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="3_xfp1c"]
 
-[sub_resource type="FontVariation" id="FontVariation_yugq0"]
+[sub_resource type="FontVariation" id="FontVariation_veduv"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_q4g57"]
-font = SubResource("FontVariation_yugq0")
-font_size = 52
-font_color = Color(0.713686, 0.282674, 0, 1)
-shadow_size = 12
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s4di8"]
-texture = ExtResource("2_py8eb")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrn8g"]
+texture = ExtResource("3_xfp1c")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -162,18 +156,18 @@ texture = ExtResource("2_py8eb")
 19:10/0 = 0
 20:10/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_dw53r"]
+[sub_resource type="TileSet" id="TileSet_3quyv"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_s4di8")
+sources/0 = SubResource("TileSetAtlasSource_nrn8g")
 
-[node name="Main" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_p4qus")
+script = ExtResource("1_g8l8w")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -181,58 +175,60 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.997
 offset_bottom = -0.0560303
-texture = ExtResource("1_tqftf")
+texture = ExtResource("2_yy0bc")
 stretch_mode = 1
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.073
-anchor_top = 0.204
-anchor_right = 0.449
-anchor_bottom = 0.5
-offset_left = 3.90399
-offset_top = -0.192001
-offset_right = 67.752
-offset_bottom = 60.0
-text = "CatchTheApple
-"
-label_settings = SubResource("LabelSettings_q4g57")
+layout_mode = 2
+offset_left = 350.0
+offset_top = 97.0
+offset_right = 785.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0.980387, 5.89602e-06, 9.62615e-07, 1)
+theme_override_fonts/font = SubResource("FontVariation_veduv")
+theme_override_font_sizes/font_size = 50
+text = "Credits du jeu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.683
-anchor_top = 0.588
-anchor_right = 0.965
-anchor_bottom = 0.744
-offset_left = 0.18396
-offset_top = -0.0239868
-offset_right = 0.319946
-offset_bottom = -0.112
+anchor_left = 0.161
+anchor_top = 0.435
+anchor_right = 0.867
+anchor_bottom = 0.849
+offset_left = -0.472015
+offset_top = -17.88
+offset_right = 0.215942
+offset_bottom = -0.152039
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Lancer le jeu"
+theme_override_colors/font_color = Color(0.238582, 0.425797, 0.913689, 1)
+theme_override_font_sizes/font_size = 33
+text = "Développement du jeu et musique: 
+Joffrey TERRINE
+Choix des assets:
+Joffrey TERRINE"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Options"
-
-[node name="Button3" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Credits
-"
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 911.0
+offset_top = 64.0
+offset_right = 1125.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 30
+text = "Retour"
+script = ExtResource("1_g8l8w")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 scale = Vector2(3, 3)
-tile_set = SubResource("TileSet_dw53r")
+tile_set = SubResource("TileSet_3quyv")
 format = 2
 layer_0/tile_data = PackedInt32Array(786432, 393216, 0, 851968, 393216, 1, 786433, 458752, 0, 851969, 458752, 1, 786434, 393216, 0, 851970, 393216, 1, 786435, 458752, 0, 851971, 458752, 1, 786436, 393216, 0, 851972, 393216, 1, 786437, 458752, 0, 851973, 458752, 1, 786438, 393216, 0, 851974, 393216, 1, 786439, 458752, 0, 851975, 458752, 1, 786440, 393216, 0, 851976, 393216, 1, 786441, 458752, 0, 851977, 458752, 1, 786442, 393216, 0, 851978, 393216, 1, 786443, 458752, 0, 851979, 458752, 1, 786444, 393216, 0, 851980, 393216, 1, 786445, 458752, 0, 851981, 458752, 1, 786446, 393216, 0, 851982, 393216, 1, 786447, 458752, 0, 851983, 458752, 1, 786448, 393216, 0, 851984, 393216, 1, 786449, 458752, 0, 851985, 458752, 1, 786450, 393216, 0, 851986, 393216, 1, 786451, 458752, 0, 851987, 458752, 1, 786452, 393216, 0, 851988, 393216, 1, 786453, 458752, 0, 851989, 458752, 1, 786454, 393216, 0, 851990, 393216, 1, 786455, 458752, 0, 851991, 458752, 1)
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Retour_pressed"]
