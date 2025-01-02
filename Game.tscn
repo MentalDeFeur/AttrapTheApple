@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://d3enmgukpppw2"]
+[gd_scene load_steps=70 format=3 uid="uid://d3enmgukpppw2"]
 
 [ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="1_7hsgu"]
 [ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="1_458jc"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Apple.gd" id="8_37xtk"]
 [ext_resource type="Texture2D" uid="uid://d2s0a08yly42i" path="res://Free/Items/Fruits/Apple.png" id="9_ymwwt"]
 [ext_resource type="Texture2D" uid="uid://beqmrxlq6ndwe" path="res://Free/Items/Fruits/Collected.png" id="10_8rxo2"]
+[ext_resource type="Script" path="res://PauseMenu.gd" id="11_r476o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v66ff"]
 size = Vector2(1195, 34)
@@ -543,6 +544,9 @@ texture = ExtResource("1_458jc")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5dg1y")
 
+[sub_resource type="LabelSettings" id="LabelSettings_pfjrr"]
+font_size = 40
+
 [node name="Game" type="Node"]
 script = ExtResource("1_ek3jp")
 
@@ -635,4 +639,49 @@ tile_set = SubResource("TileSet_ors3o")
 format = 2
 layer_0/tile_data = PackedInt32Array(786432, 393216, 0, 851968, 393216, 1, 786433, 458752, 0, 851969, 458752, 1, 786434, 393216, 0, 851970, 393216, 1, 786435, 458752, 0, 851971, 458752, 1, 786436, 393216, 0, 851972, 393216, 1, 786437, 458752, 0, 851973, 458752, 1, 786438, 393216, 0, 851974, 393216, 1, 786439, 458752, 0, 851975, 458752, 1, 786440, 393216, 0, 851976, 393216, 1, 786441, 458752, 0, 851977, 458752, 1, 786442, 393216, 0, 851978, 393216, 1, 786443, 458752, 0, 851979, 458752, 1, 786444, 393216, 0, 851980, 393216, 1, 786445, 458752, 0, 851981, 458752, 1, 786446, 393216, 0, 851982, 393216, 1, 786447, 458752, 0, 851983, 458752, 1, 786448, 393216, 0, 851984, 393216, 1, 786449, 458752, 0, 851985, 458752, 1, 786450, 393216, 0, 851986, 393216, 1, 786451, 458752, 0, 851987, 458752, 1, 786452, 393216, 0, 851988, 393216, 1, 786453, 458752, 0, 851989, 458752, 1, 786454, 393216, 0, 851990, 393216, 1, 786455, 458752, 0, 851991, 458752, 1, 786456, 393216, 0, 851992, 393216, 1, 786457, 458752, 0, 851993, 458752, 1, 786458, 393216, 0, 851994, 393216, 1, 786459, 458752, 0, 851995, 458752, 1, 786460, 393216, 0, 851996, 393216, 1, 786461, 458752, 0, 851997, 458752, 1, 786462, 393216, 0, 851998, 393216, 1, 786463, 458752, 0, 851999, 458752, 1, 786464, 393216, 0, 852000, 393216, 1, 786465, 458752, 0, 852001, 458752, 1, 786466, 393216, 0, 852002, 393216, 1, 786467, 458752, 0, 852003, 458752, 1)
 
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+script = ExtResource("11_r476o")
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseMenu"]
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.108
+anchor_right = 0.904
+anchor_bottom = 0.778
+offset_left = -0.200005
+offset_top = 0.0159988
+offset_right = -0.408081
+offset_bottom = -0.144043
+
+[node name="Label" type="Label" parent="PauseMenu"]
+offset_left = 461.0
+offset_top = 86.0
+offset_right = 717.0
+offset_bottom = 167.0
+text = "Pause"
+label_settings = SubResource("LabelSettings_pfjrr")
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="PauseMenu"]
+offset_left = 183.0
+offset_top = 265.0
+offset_right = 547.0
+offset_bottom = 376.0
+text = "Reprendre"
+
+[node name="QuitButton" type="Button" parent="PauseMenu"]
+offset_left = 630.0
+offset_top = 271.0
+offset_right = 981.0
+offset_bottom = 378.0
+text = "Quitter le jeu"
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 1045.0
+offset_top = 127.0
+offset_right = 1140.0
+offset_bottom = 171.0
+text = "Pause"
+
 [connection signal="body_entered" from="Character/Personnage/AreaCharacter" to="." method="_on_area_character_body_entered"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_Pause_pressed"]

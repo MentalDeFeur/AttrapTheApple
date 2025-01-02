@@ -20,6 +20,10 @@ func _input(event):
 		$Personnage.play("run")
 		
 func _physics_process(delta: float) -> void:
+	
+	if get_tree().paused:
+		return
+		
 	velocity.y = JUMP_VELOCITY
 	if velocity.length() > 0:
 		velocity = velocity.move_toward(Vector2.ZERO,delta)
@@ -28,4 +32,6 @@ func _physics_process(delta: float) -> void:
 		position.x = clamp(position.x,0,start_drag_position.x)
 	
 	move_and_slide()
+	
+	
 		

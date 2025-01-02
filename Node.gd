@@ -3,10 +3,12 @@ extends Node
 var spawn_interval : float = 1.3
 var spawn_timer = 0
 var value = 0
+@onready var pause_menu = $PauseMenu
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	set_process(true)
 	$Label.text = " Score : "+str(value)
 	pass # Replace with function body
@@ -27,3 +29,8 @@ func spawn_apple():
 func _on_area_character_body_entered(_body: Node2D) -> void:
 		value+=1
 		$Label.text = " Score : "+str(value)
+
+
+func _on_Pause_pressed() -> void:
+	get_tree().paused = true
+	pause_menu.visible = true
