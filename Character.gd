@@ -9,7 +9,7 @@ var is_dragging=false
 var touch_pos=0
 
 func _ready():
-	start_drag_position = get_viewport().size
+	start_drag_position = get_viewport().get_visible_rect().size
 	$Personnage.play("idle")
 	pass
 
