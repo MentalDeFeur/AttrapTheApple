@@ -214,15 +214,18 @@ offset_bottom = -0.0640259
 
 [node name="DifficultGame" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Difficulté du jeu : 0"
 script = ExtResource("3_5ibd0")
 
 [node name="MusicOptions" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Musique : Off"
 
 [node name="RetourButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Retour"
 
 [node name="TileMap" type="TileMap" parent="."]
