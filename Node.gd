@@ -8,6 +8,7 @@ var value = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$MusicAttrap.play()
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	set_process(true)
 	$Label.text = " Score : "+str(value)

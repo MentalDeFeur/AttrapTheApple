@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dy3ip4eveaa5t"]
 
-[ext_resource type="Script" path="res://Credits.gd" id="1_g8l8w"]
+[ext_resource type="Script" uid="uid://pq148furmgh2" path="res://Credits.gd" id="1_g8l8w"]
 [ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="2_yy0bc"]
 [ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="3_xfp1c"]
 
