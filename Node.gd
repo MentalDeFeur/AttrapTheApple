@@ -3,6 +3,7 @@ extends Node
 var spawn_interval : float = 1.3
 var spawn_timer = 0
 var value = 0
+var nodeapple = preload("res://Apple.tscn")
 
 
 
@@ -22,11 +23,13 @@ func _process(delta):
 		spawn_timer = spawn_interval
 		
 func spawn_apple():
-	var apple = $Apple
+	var apple = nodeapple.instantiate()
 	var random_x = randf_range(0,618)
 	apple.position = Vector2(random_x, 0)
+	add_child(apple)
 
 
-func _on_area_character_body_entered(_body: Node2D) -> void:
+func _on_area_character_body_entered(body: Node2D) -> void:
 		value+=1
 		$Label.text = " Score : "+str(value)
+		queue_free()
