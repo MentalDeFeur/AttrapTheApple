@@ -436,5 +436,3 @@ position = Vector2(572, 281.5)
 scale = Vector2(4.5, 5)
 stream = ExtResource("11_yhmtn")
 autoplay = true
-
-[connection signal="body_entered" from="Character/Personnage/AreaCharacter" to="." method="_on_area_character_body_entered"]
