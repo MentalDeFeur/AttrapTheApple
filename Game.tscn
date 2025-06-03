@@ -7,8 +7,8 @@
 [ext_resource type="Script" uid="uid://uubrie0nddgh" path="res://Character.gd" id="3_ckdkg"]
 [ext_resource type="Texture2D" uid="uid://cilr6252di41q" path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" id="4_b2qj6"]
 [ext_resource type="Texture2D" uid="uid://bktjeqec3jn85" path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" id="5_fk0c8"]
+[ext_resource type="AudioStream" uid="uid://d3bfwjy31qnkr" path="res://audio/idea_Sun_Jun_01_2025.mp3" id="8_2vekm"]
 [ext_resource type="PackedScene" uid="uid://co1yt34h4tjem" path="res://Apple.tscn" id="9_2vekm"]
-[ext_resource type="AudioStream" uid="uid://cf3eq2dy74lc" path="res://audio/BounceCatchingTheApple.wav" id="11_yhmtn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yyih5"]
 size = Vector2(1192, 189)
@@ -429,8 +429,7 @@ layer_0/tile_data = PackedInt32Array(786432, 393216, 0, 851968, 393216, 1, 78643
 [node name="MusicAttrap" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(572, 281.5)
 scale = Vector2(4.5, 5)
-stream = ExtResource("11_yhmtn")
-autoplay = true
+stream = ExtResource("8_2vekm")
 
 [node name="Score" type="Label" parent="."]
 offset_left = 917.0

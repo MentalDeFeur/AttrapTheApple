@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://tx5i7mmexa2e" path="res://Main.gd" id="1_p4qus"]
 [ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="1_tqftf"]
 [ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="2_py8eb"]
-[ext_resource type="AudioStream" uid="uid://cwg6qpm14nvno" path="res://audio/Bounce(OST of my videogame project).mp3" id="4_cm0pq"]
+[ext_resource type="AudioStream" uid="uid://c4jkd1nyugtm5" path="res://audio/Bounce.mp3" id="4_cm0pq"]
 
 [sub_resource type="FontVariation" id="FontVariation_yugq0"]
 
