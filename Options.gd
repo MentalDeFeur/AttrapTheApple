@@ -19,17 +19,17 @@ func _on_DifficultGame_pressed() -> void:
 	
 	if nbre_clicks == 1 :
 		difficultGame.text = "Difficulté du jeu : 1"
-		Global.spawn_interval = 1.5
+		Global.spawn_interval = 1.7
 	if nbre_clicks == 2 :
 		difficultGame.text = "Difficulté du jeu : 2"
-		Global.spawn_interval = 1.7
+		Global.spawn_interval = 1.9
 	if nbre_clicks == 3 :
 		difficultGame.text = "Difficulté du jeu : 3"
-		Global.spawn_interval = 1.9
+		Global.spawn_interval = 2.1
 	if nbre_clicks > Global.max_clicks:
 		nbre_clicks = 0
 		difficultGame.text = "Difficulté du jeu : 0"
-		Global.spawn_interval = 1.3
+		Global.spawn_interval = 1.5
 	
 	pass # Replace with function body.
 	

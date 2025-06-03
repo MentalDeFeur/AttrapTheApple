@@ -179,28 +179,26 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sv46s"]
-radius = 43.9318
+radius = 38.1182
 
 [node name="NodeApple" type="Node2D"]
 
-[node name="Apple" type="CharacterBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Apple" type="CharacterBody2D" parent="Area2D"]
 script = ExtResource("1_hfk3y")
 
-[node name="Area2D" type="Area2D" parent="Apple"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Apple/Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D/Apple"]
 texture_filter = 1
 position = Vector2(128, 116.5)
 scale = Vector2(5.0625, 4.71875)
 sprite_frames = SubResource("SpriteFrames_407dc")
 animation = &"apple"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Apple"]
 position = Vector2(127, 110)
 shape = SubResource("CircleShape2D_sv46s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(127, 110)
 shape = SubResource("CircleShape2D_sv46s")
-
-[connection signal="body_entered" from="Apple/Area2D" to="Apple" method="_on_area_2d_body_entered"]

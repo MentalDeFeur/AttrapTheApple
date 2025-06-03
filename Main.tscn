@@ -7,7 +7,7 @@
 
 [sub_resource type="FontVariation" id="FontVariation_yugq0"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_q4g57"]
+[sub_resource type="LabelSettings" id="LabelSettings_cm0pq"]
 font = SubResource("FontVariation_yugq0")
 font_size = 52
 font_color = Color(0.713686, 0.282674, 0, 1)
@@ -200,7 +200,7 @@ offset_right = 119.752
 offset_bottom = 58.0
 text = "CatchTheApple
 "
-label_settings = SubResource("LabelSettings_q4g57")
+label_settings = SubResource("LabelSettings_cm0pq")
 horizontal_alignment = 1
 vertical_alignment = 1
 

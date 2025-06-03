@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://d3enmgukpppw2"]
+[gd_scene load_steps=41 format=3 uid="uid://d3enmgukpppw2"]
 
 [ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="1_7hsgu"]
 [ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="1_458jc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://uubrie0nddgh" path="res://Character.gd" id="3_ckdkg"]
 [ext_resource type="Texture2D" uid="uid://cilr6252di41q" path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" id="4_b2qj6"]
 [ext_resource type="Texture2D" uid="uid://bktjeqec3jn85" path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" id="5_fk0c8"]
+[ext_resource type="PackedScene" uid="uid://co1yt34h4tjem" path="res://Apple.tscn" id="9_2vekm"]
 [ext_resource type="AudioStream" uid="uid://cf3eq2dy74lc" path="res://audio/BounceCatchingTheApple.wav" id="11_yhmtn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yyih5"]
@@ -358,6 +359,8 @@ texture = ExtResource("1_458jc")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5dg1y")
 
+[sub_resource type="LabelSettings" id="LabelSettings_joorw"]
+
 [node name="Game" type="Node"]
 script = ExtResource("1_ek3jp")
 
@@ -404,14 +407,6 @@ shape = SubResource("RectangleShape2D_1vqn8")
 position = Vector2(0.222221, -2.9)
 shape = SubResource("RectangleShape2D_poxpa")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 905.0
-offset_top = 29.0
-offset_right = 1114.0
-offset_bottom = 87.0
-theme_override_colors/font_color = Color(0.86595, 0.0854413, 0, 1)
-theme_override_font_sizes/font_size = 30
-
 [node name="MarginContainer" type="MarginContainer" parent="."]
 physics_interpolation_mode = 1
 anchors_preset = -1
@@ -436,3 +431,16 @@ position = Vector2(572, 281.5)
 scale = Vector2(4.5, 5)
 stream = ExtResource("11_yhmtn")
 autoplay = true
+
+[node name="Score" type="Label" parent="."]
+offset_left = 917.0
+offset_top = 37.0
+offset_right = 1102.0
+offset_bottom = 93.0
+text = "Score : 0"
+label_settings = SubResource("LabelSettings_joorw")
+
+[node name="NodeApple" parent="." instance=ExtResource("9_2vekm")]
+
+[connection signal="child_exiting_tree" from="Character" to="." method="_on_character_child_exiting_tree"]
+[connection signal="body_entered" from="Character/Personnage/AreaCharacter" to="." method="_on_area_character_body_entered"]
