@@ -179,13 +179,17 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sv46s"]
-radius = 38.1182
+radius = 28.2843
 
 [node name="NodeApple" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Apple" type="CharacterBody2D" parent="Area2D"]
+floor_snap_length = 0.0
+platform_on_leave = 2
+platform_floor_layers = 4294901760
+safe_margin = 0.001
 script = ExtResource("1_hfk3y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D/Apple"]
@@ -198,6 +202,7 @@ animation = &"apple"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Apple"]
 position = Vector2(127, 110)
 shape = SubResource("CircleShape2D_sv46s")
+one_way_collision = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(127, 110)

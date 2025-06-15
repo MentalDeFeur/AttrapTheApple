@@ -200,10 +200,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vqn8"]
-size = Vector2(24.6331, 27.9236)
+size = Vector2(24.6331, 24.6624)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poxpa"]
-size = Vector2(24, 27.4)
+size = Vector2(24, 24.2)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5dg1y"]
 texture = ExtResource("1_458jc")
@@ -399,13 +399,15 @@ animation = &"run"
 position = Vector2(-0.444443, 1.4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Personnage/AreaCharacter"]
-position = Vector2(-0.476395, -2.21529)
+position = Vector2(-0.476395, -0.584713)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_1vqn8")
+one_way_collision = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
-position = Vector2(0.222221, -2.9)
+position = Vector2(0.222221, -1.3)
 shape = SubResource("RectangleShape2D_poxpa")
+one_way_collision = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 physics_interpolation_mode = 1

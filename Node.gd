@@ -19,7 +19,7 @@ func _process(delta):
 		
 func spawn_apple():
 	var apple = $NodeApple/Area2D/Apple
-	var random_x = randf_range(0,618)
+	var random_x = randf_range(0,648)
 	apple.position = Vector2(random_x, 0)
 	add_child(apple)
 	

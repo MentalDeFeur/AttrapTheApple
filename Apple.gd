@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var gravity = 500
+var gravity = 400
 
 func _ready():
 	pass

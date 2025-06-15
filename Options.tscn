@@ -167,6 +167,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_t1nsn")
 
 [node name="OptionMenu" type="Control"]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -175,6 +176,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
+clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
