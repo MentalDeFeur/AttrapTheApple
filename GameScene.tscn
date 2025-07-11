@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://duin2jol2yh0n"]
+
+[ext_resource type="Script" uid="uid://bvte32bthno5q" path="res://GameLogic.gd" id="1_eqhe0"]
+
+[sub_resource type="FontVariation" id="FontVariation_eqhe0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k77ap"]
+font = SubResource("FontVariation_eqhe0")
+font_size = 42
+
+[node name="Timer" type="Node2D"]
+script = ExtResource("1_eqhe0")
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_right = 292.0
+offset_bottom = 121.0
+text = "
+"
+label_settings = SubResource("LabelSettings_k77ap")
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
