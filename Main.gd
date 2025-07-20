@@ -3,6 +3,10 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Label/AnimationPlayer.play("zoom_in")
+	$VBoxContainer/Button/AnimationPlayer.play("zoom_in")
+	$VBoxContainer/Button2/AnimationPlayer.play("zoom_in")
+	$VBoxContainer/Button3/AnimationPlayer.play("zoom_in")
 	$MusicBG.play()
 	pass # Replace with function body.
 
