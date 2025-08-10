@@ -17,6 +17,7 @@ font_color = Color(0.713686, 0.282674, 0, 1)
 shadow_size = 12
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id="Animation_fos0i"]
 length = 0.001
 tracks/0/type = "value"
@@ -102,6 +103,8 @@ _data = {
 &"zoom_in": SubResource("Animation_cm0pq")
 }
 
+=======
+>>>>>>> parent of b72a773 (ajoutanimationmain)
 =======
 >>>>>>> parent of b72a773 (ajoutanimationmain)
 [sub_resource type="Theme" id="Theme_k4puj"]
