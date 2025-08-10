@@ -15,12 +15,6 @@ font = SubResource("FontVariation_fos0i")
 font_size = 67
 font_color = Color(0.713686, 0.282674, 0, 1)
 shadow_size = 12
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of ba689d0 (ajoutanimationmain)
 [sub_resource type="Animation" id="Animation_fos0i"]
 length = 0.001
 tracks/0/type = "value"
@@ -106,10 +100,6 @@ _data = {
 &"zoom_in": SubResource("Animation_cm0pq")
 }
 
-=======
->>>>>>> parent of b72a773 (ajoutanimationmain)
-=======
->>>>>>> parent of b72a773 (ajoutanimationmain)
 [sub_resource type="Theme" id="Theme_k4puj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nx7or"]
