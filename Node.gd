@@ -77,8 +77,12 @@ func spawn_apple():
 
 =======
 	var apple = $NodeApple/Area2D/Apple
+<<<<<<< HEAD
 >>>>>>> parent of 090d0c6 (correctionbugaffichagejeu):Node.gd
 	var random_x = randf_range(0,648)
+=======
+	var random_x = randf_range(0,618)
+>>>>>>> parent of adaca64 (ajoutcollisionjeu)
 	apple.position = Vector2(random_x, 0)
 	if apple.has_node("CollisionShape2D"):
 		apple.get_node("CollisionShape2D").scale = Vector2(0.7, 0.7)
