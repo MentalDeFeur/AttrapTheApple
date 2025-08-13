@@ -1,10 +1,7 @@
 extends CharacterBody2D
 
-var gravity = 500
+var fall_speed: float = 300
 
-func _ready():
-	pass
-	
 func _process(delta):
-	velocity.y += gravity * delta
-	move_and_slide()
+	position.y += fall_speed * delta
+	pass 

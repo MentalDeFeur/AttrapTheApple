@@ -15,7 +15,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventScreenDrag:
-		is_dragging=true
+		is_dragging= true
 		position.x += event.relative.x
 		$Personnage.play("run")
 		
@@ -32,5 +32,4 @@ func _physics_process(delta: float) -> void:
 		position.x = clamp(position.x,0,start_drag_position.x)
 	
 	move_and_slide()
-	
 	

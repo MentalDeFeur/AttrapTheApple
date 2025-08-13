@@ -11,6 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_Play_pressed() -> void:
+	Global.score = 0
 	get_tree().change_scene_to_file("res://Game.tscn")
 	pass # Replace with function body.
 
