@@ -1,7 +1,9 @@
 extends Node
 
 var score: int = 0
-var game_time: float = 30.0 # durée en secondes
+var game_time = 60
+var spawn_interval = 1
+ # durée en secondes
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
