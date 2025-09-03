@@ -1,17 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://o1ljbmub3bbo"]
+[gd_scene load_steps=9 format=3 uid="uid://o1ljbmub3bbo"]
 
 [ext_resource type="Script" uid="uid://tx5i7mmexa2e" path="res://Main.gd" id="1_p4qus"]
 [ext_resource type="Texture2D" uid="uid://dxk2uqgm5rvv4" path="res://Free/Background/Green.png" id="1_tqftf"]
 [ext_resource type="Texture2D" uid="uid://cx73o4wqi4vlq" path="res://Free/Terrain/Terrain (16x16).png" id="2_py8eb"]
 [ext_resource type="AudioStream" uid="uid://c4jkd1nyugtm5" path="res://audio/Bounce.mp3" id="4_cm0pq"]
-
-[sub_resource type="FontVariation" id="FontVariation_yugq0"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_cm0pq"]
-font = SubResource("FontVariation_yugq0")
-font_size = 52
-font_color = Color(0.713686, 0.282674, 0, 1)
-shadow_size = 12
+[ext_resource type="Texture2D" uid="uid://bfu2mh0v7kka6" path="res://image.png" id="5_fos0i"]
 
 [sub_resource type="Theme" id="Theme_k4puj"]
 
@@ -187,23 +180,6 @@ offset_bottom = -2.00006
 texture = ExtResource("1_tqftf")
 stretch_mode = 1
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.073
-anchor_top = 0.204
-anchor_right = 0.449
-anchor_bottom = 0.5
-offset_left = -17.44
-offset_top = -9.88
-offset_right = 43.28
-offset_bottom = -2.0
-text = "CatchTheApple
-"
-label_settings = SubResource("LabelSettings_cm0pq")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -211,10 +187,10 @@ anchor_left = 0.599
 anchor_top = 0.56
 anchor_right = 0.945
 anchor_bottom = 0.81
-offset_left = 0.280029
-offset_top = -93.2
-offset_right = 0.400024
-offset_bottom = -108.2
+offset_left = -0.0479736
+offset_top = -21.88
+offset_right = 0.359985
+offset_bottom = 9.12
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_k4puj")
@@ -247,6 +223,15 @@ position = Vector2(-2, 1)
 stream = ExtResource("4_cm0pq")
 autoplay = true
 parameters/looping = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 51.0
+offset_right = 508.0
+offset_bottom = 421.0
+texture = ExtResource("5_fos0i")
+expand_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Options_pressed"]

@@ -2,7 +2,7 @@ extends Node
 
 var score: int = 0
 var game_time = 60
-var spawn_interval = 1
+var spawn_interval = 0.3
  # durée en secondes
 
 # Called when the node enters the scene tree for the first time.

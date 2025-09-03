@@ -17,13 +17,13 @@ func _on_DifficultGame_pressed() -> void:
 	nbre_clicks += 1
 	if nbre_clicks == 1 :
 		difficultGame.text = "Difficulté du jeu : 1"
-		Global.spawn_interval = 1
+		Global.spawn_interval = 0.3
 	if nbre_clicks == 2 :
 		difficultGame.text = "Difficulté du jeu : 2"
 		Global.spawn_interval = 0.7
 	if nbre_clicks == 3 :
 		difficultGame.text = "Difficulté du jeu : 3"
-		Global.spawn_interval = 0.2
+		Global.spawn_interval = 1
 	if nbre_clicks > 3:
 		nbre_clicks = 0
 		difficultGame.text = "Difficulté du jeu : 0"
