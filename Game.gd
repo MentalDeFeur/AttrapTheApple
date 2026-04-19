@@ -33,8 +33,13 @@ func _spawn_apple():
 	var random_x = randf_range(0,1080)
 	apple.position = Vector2(random_x, -100)
 	add_child(apple)
+	apple.get_node("Area2D").connect("body_entered", _on_apple_body_entered.bind(apple))
+
+
+func _on_apple_body_entered(body: Node2D, apple: Node2D) -> void:
+	if body.name == "Character":
+		Global.score += 1
+		apple.queue_free()
 
 func _on_area_character_body_entered(body: Node2D) -> void:
-	Global.score += 1
-	if body.name == "Apple":
-		body.queue_free()
+	pass
