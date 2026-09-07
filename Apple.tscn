@@ -152,7 +152,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"apple",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -173,9 +173,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tr4lt")
 }],
-"loop": true,
+"loop": false,
 "name": &"collected",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sv46s"]
@@ -194,6 +194,7 @@ position = Vector2(128, 116.5)
 scale = Vector2(5.0625, 4.71875)
 sprite_frames = SubResource("SpriteFrames_407dc")
 animation = &"apple"
+autoplay = &"apple"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Apple"]
 position = Vector2(127, 110)

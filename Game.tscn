@@ -6,7 +6,8 @@
 [ext_resource type="Script" uid="uid://uubrie0nddgh" path="res://Character.gd" id="3_ckdkg"]
 [ext_resource type="Texture2D" uid="uid://d53s5q7sh16h" path="res://personnage_vector_godot_1.png" id="4_3mrqo"]
 [ext_resource type="AudioStream" uid="uid://d3bfwjy31qnkr" path="res://audio/idea_Sun_Jun_01_2025.mp3" id="8_2vekm"]
-[ext_resource type="PackedScene" uid="uid://co1yt34h4tjem" path="res://Apple.tscn" id="9_2vekm"]
+[ext_resource type="AudioStream" uid="uid://c8bicg0n34jpo" path="res://audio/coin.wav" id="8_joorw"]
+[ext_resource type="PackedScene" uid="uid://cioyiwx3l8opq" path="res://PauseMenu.tscn" id="10_pause"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yyih5"]
 size = Vector2(1161, 189)
@@ -66,7 +67,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yhmtn")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -89,7 +90,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0yprl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run",
 "speed": 5.0
 }]
@@ -585,10 +586,18 @@ theme_override_fonts/font = SubResource("FontFile_2vekm")
 text = "Score : 0"
 label_settings = SubResource("LabelSettings_yx171")
 
-[node name="NodeApple" parent="." unique_id=1882596797 instance=ExtResource("9_2vekm")]
-physics_interpolation_mode = 1
-top_level = true
-position = Vector2(1, 4)
+[node name="PauseMenu" parent="." unique_id=624093968 instance=ExtResource("10_pause")]
+
+[node name="CatchSfx" type="AudioStreamPlayer" parent="." unique_id=1367187821]
+stream = ExtResource("8_joorw")
+
+[node name="BtnPause" type="Button" parent="." unique_id=1568463108]
+offset_left = 970.0
+offset_top = 18.0
+offset_right = 1080.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 18
+text = "⏸ Pause"
 
 [node name="Temps" type="Label" parent="." unique_id=197880644]
 offset_left = 975.0
@@ -599,3 +608,4 @@ theme_override_fonts/font = SubResource("FontFile_yhmtn")
 
 [connection signal="child_exiting_tree" from="Character" to="." method="_on_character_child_exiting_tree"]
 [connection signal="body_entered" from="Character/Personnage/AreaCharacter" to="." method="_on_area_character_body_entered"]
+[connection signal="pressed" from="BtnPause" to="." method="_on_pause_button_pressed"]
